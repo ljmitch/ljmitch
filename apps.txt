@@ -18,6 +18,7 @@ winscp
 mobaxterm
 notepadplusplus
 7zip
+imdisk-toolkit
 adobereader
 microsoft-windows-terminal
 advanced-ip-scanner

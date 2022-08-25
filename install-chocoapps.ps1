@@ -12,9 +12,9 @@ if ([string]::IsNullOrWhiteSpace($appListArray) -eq $false -or [string]::IsNullO
         choco config get cacheLocation
     }catch{
         Write-Output "Chocolatey not detected, trying to install now"
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
         iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
         choco feature enable -n allowGlobalConfirmation
-
     }
 }
 

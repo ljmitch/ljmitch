@@ -1,8 +1,8 @@
 $appsUrl = "https://raw.githubusercontent.com/ljmitch/ljmitch/main/apps.txt"
 $appList = Invoke-RestMethod -Uri $appsUrl
 $appListArray = $appList -split "`r`n" | ConvertFrom-Csv
-$dismAppsUrl = ""
-$dismAppList = ""
+$dismAppsUrl = "https://raw.githubusercontent.com/ljmitch/ljmitch/main/dismAppList.txt"
+$dismAppList = Invoke-RestMethod -Uri $dismAppsUrl
 $dismAppListArray = ""
 
 # Check if chocolatey is installed

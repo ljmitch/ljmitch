@@ -2,11 +2,11 @@ $appsUrl = "https://raw.githubusercontent.com/ljmitch/ljmitch/main/apps.txt"
 $appList = Invoke-RestMethod -Uri $appsUrl
 $appListArray = $appList -split "`r`n" | ConvertFrom-Csv
 $dismAppsUrl = "https://raw.githubusercontent.com/ljmitch/ljmitch/main/dismAppList.txt"
-$dismAppList = Invoke-RestMethod -Uri $dismAppsUrl
-$dismAppListArray = ""
+$dismAppList = "" #Invoke-RestMethod -Uri $dismAppsUrl
+$dismAppListArray = $dismAppList -split "`r`n" | ConvertFrom-Csv
 
 # Check if chocolatey is installed
-if ([string]::IsNullOrWhiteSpace($appListArray) -eq $false -or [string]::IsNullOrWhiteSpace($dismAppListArray) -eq $false)
+if ([string]::IsNullOrWhiteSpace($appList) -eq $false -or [string]::IsNullOrWhiteSpace($dismAppList) -eq $false)
 {
     try{
         choco config get cacheLocation
@@ -19,7 +19,7 @@ if ([string]::IsNullOrWhiteSpace($appListArray) -eq $false -or [string]::IsNullO
 }
 
 # Install appList
-if ([string]::IsNullOrWhiteSpace($appListArray) -eq $false){   
+if ([string]::IsNullOrWhiteSpace($appList) -eq $false){   
     Write-Host "Chocolatey Apps Specified"  
     foreach ($app in $appListArray.appList) {
         Write-Host "Installing app: $app"
@@ -28,7 +28,7 @@ if ([string]::IsNullOrWhiteSpace($appListArray) -eq $false){
 }
 
 # Install dismAppList
-if ([string]::IsNullOrWhiteSpace($dismAppListArray) -eq $false){
+if ([string]::IsNullOrWhiteSpace($dismAppList) -eq $false){
     Write-Host "DISM Features Specified"    
     foreach ($app in $dismAppListArray.appList) {
         Write-Host "Installing dism feature: $app"

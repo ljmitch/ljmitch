@@ -1,0 +1,15 @@
+obs-studio
+vlc
+firefox
+googlechrome
+tor-browser
+mousewithoutborders
+discord
+whatsapp
+telegram
+microsoft-teams
+tixati
+nvidia-display-driver
+sql-server-management-studio
+docker-desktop
+oh-my-posh

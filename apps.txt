@@ -1,3 +1,4 @@
+appList
 nugetpackagemanager
 powershell-core
 python

@@ -1,3 +1,4 @@
+appList
 obs-studio
 vlc
 firefox

@@ -41,6 +41,10 @@ vscode-kubernetes-tools
 vscode-intellicode
 github-desktop
 microsoftazurestorageexplorer
+rvtools
+vmrc
+vmware-powercli-psmodule
+rdmfree
 chocolateygui
 powertoys
 keepass

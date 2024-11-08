@@ -1,5 +1,9 @@
 <#
-  Quick script to setup a windows server for packer builds
+    Basic app requirements for setting up an new github self hosted runner for packer.
+
+    Using chocolatey where possible to install apps. (move to winget when available)
+
+    Internet access required, which a github cloud self hosted runner will need anyway.
 #>
 
 $ErrorActionPreference = "Stop"
@@ -131,7 +135,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
 Write-Host "$(Get-Date -format T) - Execution policy set to Bypass for this session."
 
 # Check if NuGet is installed
-Write-Host "$(Get-Date -format T) - Installing NuGet"
+Write-Host "$(Get-Date -format T) - Checking for NuGet and installing if missing"
 Get-PackageProvider -Name NuGet -ForceBootstrap -ErrorAction SilentlyContinue
 
 # Trust PSGallery

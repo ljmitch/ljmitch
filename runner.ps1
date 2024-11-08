@@ -19,7 +19,7 @@ $packages = @( # List of packages to ensure are installed with chocolatey
     "vmware-powercli-psmodule",
     #"az.powershell",
     #"azure-cli",
-    "terraform",
+    #"terraform",
     "packer"
 )
 
@@ -126,15 +126,19 @@ function Install-Package {
 
 ### Main Script Execution ###
 
+# Set the execution policy to bypass for the current session
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+Write-Host "$(Get-Date -format T) - Execution policy set to Bypass for this session."
+
 # Check if NuGet is installed
-Write-Output "$(Get-Date -format T) - Installing NuGet"
+Write-Host "$(Get-Date -format T) - Installing NuGet"
 Get-PackageProvider -Name NuGet -ForceBootstrap -ErrorAction SilentlyContinue
 
 # Trust PSGallery
 Set-PSRepository -InstallationPolicy Trusted -Name PSGallery
 
 # Check if oscdimg is installed
-Write-Output "$(Get-Date -format T) - Installing oscdimg"
+Write-Host "$(Get-Date -format T) - Installing oscdimg"
 Check-Admin
 Add-OscdimgToPath
 Download-ADK

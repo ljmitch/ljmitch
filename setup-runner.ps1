@@ -21,9 +21,9 @@ $packages = @( # List of packages to ensure are installed with chocolatey
     "powershell-core",
     "git",
     "vmware-powercli-psmodule",
-    #"az.powershell",
-    #"azure-cli",
-    #"terraform",
+    "az.powershell",
+    "azure-cli",
+    "terraform",
     "packer"
 )
 

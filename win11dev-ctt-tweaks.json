@@ -1,0 +1,36 @@
+{
+  "WPFTweaks": [
+    "WPFTweaksConsumerFeatures",
+    "WPFTweaksHiber",
+    "WPFTweaksPowershell7",
+    "WPFTweaksAH",
+    "WPFTweaksDisableipsix",
+    "WPFTweaksDVR",
+    "WPFTweaksPowershell7Tele",
+    "WPFTweaksDisableLMS1",
+    "WPFTweaksEndTaskOnTaskbar",
+    "WPFTweaksServices",
+    "WPFTweaksRightClickMenu",
+    "WPFTweaksTele",
+    "WPFTweaksRemoveCopilot",
+    "WPFTweaksHome",
+    "WPFTweaksLoc",
+    "WPFTweaksIPv46",
+    "WPFTweaksRecallOff",
+    "WPFTweaksRemoveOnedrive",
+    "WPFTweaksDisableFSO",
+    "WPFTweaksEdgeDebloat",
+    "WPFTweaksDisableNotifications",
+    "WPFTweaksDisableBGapps",
+    "WPFTweaksStorage",
+    "WPFTweaksDeleteTempFiles",
+    "WPFTweaksRemoveHomeGallery",
+    "WPFTweaksTeredo",
+    "WPFTweaksWifi"
+  ],
+  "WPFFeature": [
+    "WPFFeatureDisableSearchSuggestions"
+  ],
+  "WPFInstall": [],
+  "Install": []
+}
